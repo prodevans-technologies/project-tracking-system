@@ -5,6 +5,8 @@
 <title>Home</title>
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap css -->
 <c:url value="/bootstrap/css/bootstrap.min.css" var="bootstrap_css"></c:url>
 <link rel="stylesheet" href="${bootstrap_css}">
 
@@ -81,7 +83,7 @@
 
 	<!-- Footer -->
 	<footer class="navbar-inverse navbar-fixed-bottom">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="company_name">All &copy; reserved by Prodevans
 				Technologies LLP</div>
 			<div></div>
