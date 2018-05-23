@@ -1,4 +1,4 @@
-package com.prodevans.project;
+package com.prodevans.project.controller;
 
 import java.text.DateFormat;
 import java.util.Date;

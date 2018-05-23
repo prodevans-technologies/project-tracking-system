@@ -18,7 +18,6 @@
 <!-- Custom style sheet -->
 <c:url value="/resources/style.css" var="custom_css" />
 <link rel="stylesheet" href="${custom_css}">
-
 </head>
 <body>
 	<!-- Static navbar -->
@@ -60,7 +59,7 @@
 				<!-- Default panel contents -->
 				<div class="panel-heading">Login</div>
 				<div class="panel-body">
-					<form action="/action_page.php">
+					<form action='<c:url value="/kanban" />'>
 						<div class="form-group">
 							<label for="email">Email address:</label> <input type="email"
 								class="form-control" id="email">
