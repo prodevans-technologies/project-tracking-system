@@ -47,7 +47,7 @@
 						data-toggle="dropdown" role="button" aria-haspopup="true"
 						aria-expanded="false">Hi... Admin <span class="caret"></span></button>
 						<ul class="dropdown-menu">
-							<li><a href="#">Profile</a></li>
+							<li><a href='<c:url value="/profile" />'>Profile</a></li>
 							<li><a href="#">Change Password</a></li>
 						</ul></li>
 				</ul>

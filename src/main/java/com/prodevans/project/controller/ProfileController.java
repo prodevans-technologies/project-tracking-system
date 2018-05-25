@@ -17,10 +17,10 @@ private static final Logger logger = LoggerFactory.getLogger( ProfileController.
 	 * @param model
 	 * @return ProfileController
 	 */
-	@RequestMapping(value = "/profile-controller", method = RequestMethod.GET)
+	@RequestMapping(value = "/profile", method = RequestMethod.GET)
 	public String getProfileController(Model model) {
 		logger.info("Welcome to create Profile-Controller");
-		return "profile-controller";
+		return "profile";
 	}
 	
 }
