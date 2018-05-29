@@ -39,17 +39,30 @@
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
-                                    <li class="active"> <button type="button"  class="btn btn-primary navbar-btn" onclick='location.href=<c:url value="/"></c:url>'>Create Project</button>
-<!--                                        <a href="./"  class="btn btn-default navbar-btn" >Create Project <span
-							class="sr-only">(current)</span></a></li>-->
-                                    <li class="dropdown" style="margin-left: 10px">
-                                            <button href="#" class="btn btn-success navbar-btn" type="button"
-						data-toggle="dropdown" role="button" aria-haspopup="true"
-						aria-expanded="false">Hi... Admin <span class="caret"></span></button>
+					<li class="active" >
+						<a href='<c:url value="/kanban"></c:url>' >Kanban Board</a>
+					</li>
+					<li >
+						<a	href='<c:url value="/employee"></c:url>' >Create
+							Employee</a>
+					</li>
+					
+					<li >
+						<a href='<c:url value="/"></c:url>' >Create
+							Project</a>
+					</li>
+
+					<li class="dropdown" style="margin-left: 10px">
+						<button href="#" class="btn btn-success navbar-btn" type="button"
+							data-toggle="dropdown" role="button" aria-haspopup="true"
+							aria-expanded="false">
+							Hi... Admin <span class="caret"></span>
+						</button>
 						<ul class="dropdown-menu">
 							<li><a href='<c:url value="/profile" />'>Profile</a></li>
 							<li><a href="#">Change Password</a></li>
-						</ul></li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 			<!--/.nav-collapse -->

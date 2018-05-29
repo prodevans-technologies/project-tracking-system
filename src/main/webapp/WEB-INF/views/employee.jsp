@@ -45,7 +45,7 @@
 	<!-- Static navbar -->
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
-			<div class="navbar-header">
+		<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed"
 					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
 					aria-controls="navbar">
@@ -57,7 +57,6 @@
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
-					
 					<li >
 						<a href='<c:url value="/kanban"></c:url>' >Kanban Board</a>
 					</li>
@@ -81,73 +80,72 @@
 
 	<!--/. Navigation bar end -->
 
-	<div class="container">
+<div class="container">
 		<div class="container">
 			<div class="panel panel-default">
-				<div class="panel-heading">Profile</div>
+				<div class="panel-heading">Employee</div>
 				<div class="panel-body">
-
-
+				
+				
 					<form>
 						<div class="form-group row">
-							<label for="inputName3" class="col-sm-2 col-form-label">Name</label>
+							<label for="inputName3" class="col-sm-2 col-form-label">Emp_ID</label>
 							<div class="col-sm-10">
 								<input type="text" class="form-control" id="inputName3"
-									placeholder="Name">
+									placeholder="Enter Your Employee_ID">
 							</div>
 						</div>
 						<div class="form-group row">
-							<label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+							<label for="inputName3" class="col-sm-2 col-form-label">Emp_Name</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="inputName3"
+									placeholder="Enter Your Name">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="inputEmail3" class="col-sm-2 col-form-label">Emp_Email</label>
 							<div class="col-sm-10">
 								<input type="email" class="form-control" id="inputEmail3"
-									placeholder="Email">
+									placeholder="Employee-Email">
 							</div>
 						</div>
 						<div class="form-group row">
-							<label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+							<label for="inputPassword3" class="col-sm-2 col-form-label">Emp_Designation</label>
 							<div class="col-sm-10">
-								<input type="password" class="form-control" id="inputPassword3"
-									placeholder="Password">
+								<input type="text" class="form-control" id="inputPassword3"
+									placeholder="Enter your Designation">
 							</div>
 						</div>
 						<div class="form-group row">
-							<label for="inputAddress3" class="col-sm-2 col-form-label">Address</label>
+							<label for="inputAddress3" class="col-sm-2 col-form-label">Emp_Address</label>
 							<div class="col-sm-10">
 								<input type="text" class="form-control" id="inputAddress3"
-									placeholder="Address">
+									placeholder="Enter Your Address">
 							</div>
 						</div>
 						<div class="form-group row">
-							<label for="inputPhoneNumber3" class="col-sm-2 col-form-label">PhoneNumber</label>
+							<label for="inputPhoneNumber3" class="col-sm-2 col-form-label">Emp_PhoneNumber</label>
 							<div class="col-sm-10">
 								<input type="text" class="form-control" id="inputPhoneNumber3"
-									placeholder="PhoneNumber">
+									placeholder="Enter Your PhoneNumber">
+							</div>
+								</div>
+								<div class="form-group row">
+							<label for="inputName3" class="col-sm-2 col-form-label">Join_Date</label>
+							<div class="col-sm-10">
+								<input type="Date" class="form-control" id="inputName3"
+									placeholder="Company Joined Date">
 							</div>
 						</div>
-						<fieldset class="form-group">
-							<div class="row">
-								<label class="col-form-label col-sm-2 pt-0">Gender</label>
-								<div class="col-sm-10">
-									<div class="form-check">
-										<input class="form-check-input" type="radio" name="gridRadios"
-											id="gridRadios1" value="option1" checked> <label
-											class="form-check-label" for="gridRadios1"> Male </label>
-									</div>
-									<div class="form-check">
-										<input class="form-check-input" type="radio" name="gridRadios"
-											id="gridRadios2" value="option2"> <label
-											class="form-check-label" for="gridRadios2"> Female </label>
-									</div>
-								</div>
-							</div>
-						</fieldset>
 						<button type="submit" class="btn btn-default">Submit</button>
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
-	
+				
+				
+				
 	<!-- Footer -->
 	<footer class="navbar-inverse navbar-fixed-bottom">
 		<div class="container-fluid">
