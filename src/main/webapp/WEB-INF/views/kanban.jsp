@@ -48,7 +48,7 @@
 					</li>
 					
 					<li >
-						<a href='<c:url value="/"></c:url>' >Create
+						<a href='<c:url value="/create-project"></c:url>' >Create
 							Project</a>
 					</li>
 
