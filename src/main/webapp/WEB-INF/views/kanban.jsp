@@ -39,17 +39,13 @@
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li class="active" >
-						<a href='<c:url value="/kanban"></c:url>' >Kanban Board</a>
+					<li class="active"><a href='<c:url value="/kanban"></c:url>'>Kanban
+							Board</a></li>
+					<li><a href='<c:url value="/employee"></c:url>'>Employee</a>
 					</li>
-					<li >
-						<a	href='<c:url value="/employee"></c:url>' >Employee</a>
-					</li>
-					
-					<li >
-						<a href='<c:url value="/create-project"></c:url>' >Create
-							Project</a>
-					</li>
+
+					<li><a href='<c:url value="/create-project"></c:url>'>Create
+							Project</a></li>
 
 					<li class="dropdown" style="margin-left: 10px">
 						<button href="#" class="btn btn-success navbar-btn" type="button"
@@ -69,165 +65,169 @@
 		<!--/.container-fluid -->
 	</nav>
 	</div>
-        <!--/. Navigation bar end -->
+	<!--/. Navigation bar end -->
 
-        <!-- Main container -->
-        <div class="container">
-            <div class="col-md-4">
-                <div class="panel panel-default ">
-                    <div class="panel-heading">Project 1</div>
-                    <div class="panel-body">
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success" role="progressbar"
-                                 aria-valuenow="40" aria-valuemin="0" aria-valuemax="40"
-                                 style="width: 40%">40% Complete (To Do)</div>
-                        </div>
+	<!-- Main container -->
+	<div class="container">
+		<div class="col-md-4">
+			<div class="panel panel-default ">
+				<div class="panel-heading">Project 1</div>
+				<div class="panel-body">
+					<div class="progress">
+						<div class="progress-bar progress-bar-success" role="progressbar"
+							aria-valuenow="40" aria-valuemin="0" aria-valuemax="40"
+							style="width: 40%">40% Complete (To Do)</div>
 
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-info" role="progressbar"
-                                 aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-                                 style="width: 50%">50% Complete (Working)</div>
-                        </div>
+					</div>
 
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-warning" role="progressbar"
-                                 aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                                 style="width: 60%">60% Complete (Done)</div>
-                        </div>
+					<div class="progress">
+						<div class="progress-bar progress-bar-info" role="progressbar"
+							aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+							style="width: 50%">50% Complete (Working)</div>
+					</div>
 
-
-                    </div>
+					<div class="progress">
+						<div class="progress-bar progress-bar-warning" role="progressbar"
+							aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+							style="width: 60%">60% Complete (Done)</div>
+					</div>
+					<a href="" class="btn btn-warning">Done</a>
                 </div>
-            </div>
+			
+			</div>
+
+		</div>
+      <div class="col-md-4">
+			<div class="panel panel-default ">
+				<div class="panel-heading">Project 2</div>
+				<div class="panel-body">
+					<div class="progress">
+						<div class="progress-bar progress-bar-success" role="progressbar"
+							aria-valuenow="40" aria-valuemin="0" aria-valuemax="40"
+							style="width: 40%">40% Complete (To Do)</div>
+					</div>
+
+					<div class="progress">
+						<div class="progress-bar progress-bar-info" role="progressbar"
+							aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+							style="width: 50%">50% Complete (Working)</div>
+					</div>
+
+					<div class="progress">
+						<div class="progress-bar progress-bar-warning" role="progressbar"
+							aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+							style="width: 60%">60% Complete (Done)</div>
+					</div>
+        <a href="" class="btn btn-warning">Done</a>
+
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="panel panel-default ">
+				<div class="panel-heading">Project 3</div>
+				<div class="panel-body">
+					<div class="progress">
+						<div class="progress-bar progress-bar-success" role="progressbar"
+							aria-valuenow="40" aria-valuemin="0" aria-valuemax="40"
+							style="width: 40%">40% Complete (To Do)</div>
+					</div>
+
+					<div class="progress">
+						<div class="progress-bar progress-bar-info" role="progressbar"
+							aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+							style="width: 50%">50% Complete (Working)</div>
+					</div>
+
+					<div class="progress">
+						<div class="progress-bar progress-bar-warning" role="progressbar"
+							aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+							style="width: 60%">60% Complete (Done)</div>
+					</div>
+					<a href="" class="btn btn-warning">Done</a>
 
 
-            <div class="col-md-4">
-                <div class="panel panel-default ">
-                    <div class="panel-heading">Project 1</div>
-                    <div class="panel-body">
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success" role="progressbar"
-                                 aria-valuenow="40" aria-valuemin="0" aria-valuemax="40"
-                                 style="width: 40%">40% Complete (To Do)</div>
-                        </div>
+				</div>
+			</div>
 
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-info" role="progressbar"
-                                 aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-                                 style="width: 50%">50% Complete (Working)</div>
-                        </div>
+		</div>
 
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-warning" role="progressbar"
-                                 aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                                 style="width: 60%">60% Complete (Done)</div>
-                        </div>
+		<div class="col-md-4">
+			<div class="panel panel-default ">
+				<div class="panel-heading">Project 4</div>
+				<div class="panel-body">
+					<div class="progress">
+						<div class="progress-bar progress-bar-success" role="progressbar"
+							aria-valuenow="40" aria-valuemin="0" aria-valuemax="40"
+							style="width: 40%">40% Complete (To Do)</div>
+					</div>
 
+					<div class="progress">
+						<div class="progress-bar progress-bar-info" role="progressbar"
+							aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+							style="width: 50%">50% Complete (Working)</div>
+					</div>
 
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default ">
-                    <div class="panel-heading">Project 1</div>
-                    <div class="panel-body">
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success" role="progressbar"
-                                 aria-valuenow="40" aria-valuemin="0" aria-valuemax="40"
-                                 style="width: 40%">40% Complete (To Do)</div>
-                        </div>
+					<div class="progress">
+						<div class="progress-bar progress-bar-warning" role="progressbar"
+							aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+							style="width: 60%">60% Complete (Done)</div>
+					</div>
+					<a href="" class="btn btn-warning">Done</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="panel panel-default ">
+				<div class="panel-heading">Project 5</div>
+				<div class="panel-body">
+					<div class="progress">
+						<div class="progress-bar progress-bar-success" role="progressbar"
+							aria-valuenow="40" aria-valuemin="0" aria-valuemax="40"
+							style="width: 40%">40% Complete (To Do)</div>
+					</div>
 
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-info" role="progressbar"
-                                 aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-                                 style="width: 50%">50% Complete (Working)</div>
-                        </div>
+					<div class="progress">
+						<div class="progress-bar progress-bar-info" role="progressbar"
+							aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+							style="width: 50%">50% Complete (Working)</div>
+					</div>
+					<div class="progress">
+						<div class="progress-bar progress-bar-warning" role="progressbar"
+							aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+							style="width: 60%">60% Complete (Done)</div>
+					</div>
+					<a href="" class="btn btn-warning">Done</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="panel panel-default ">
+				<div class="panel-heading">Project 6</div>
+				<div class="panel-body">
+					<div class="progress">
+						<div class="progress-bar progress-bar-success" role="progressbar"
+							aria-valuenow="40" aria-valuemin="0" aria-valuemax="40"
+							style="width: 40%">40% Complete (To Do)</div>
+					</div>
 
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-warning" role="progressbar"
-                                 aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                                 style="width: 60%">60% Complete (Done)</div>
-                        </div>
+					<div class="progress">
+						<div class="progress-bar progress-bar-info" role="progressbar"
+							aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+							style="width: 50%">50% Complete (Working)</div>
+					</div>
 
-
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="col-md-4">
-                <div class="panel panel-default ">
-                    <div class="panel-heading">Project 1</div>
-                    <div class="panel-body">
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success" role="progressbar"
-                                 aria-valuenow="40" aria-valuemin="0" aria-valuemax="40"
-                                 style="width: 40%">40% Complete (To Do)</div>
-                        </div>
-
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-info" role="progressbar"
-                                 aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-                                 style="width: 50%">50% Complete (Working)</div>
-                        </div>
-
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-warning" role="progressbar"
-                                 aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                                 style="width: 60%">60% Complete (Done)</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default ">
-                    <div class="panel-heading">Project 1</div>
-                    <div class="panel-body">
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success" role="progressbar"
-                                 aria-valuenow="40" aria-valuemin="0" aria-valuemax="40"
-                                 style="width: 40%">40% Complete (To Do)</div>
-                        </div>
-
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-info" role="progressbar"
-                                 aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-                                 style="width: 50%">50% Complete (Working)</div>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-warning" role="progressbar"
-                                 aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                                 style="width: 60%">60% Complete (Done)</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default ">
-                    <div class="panel-heading">Project 1</div>
-                    <div class="panel-body">
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success" role="progressbar"
-                                 aria-valuenow="40" aria-valuemin="0" aria-valuemax="40"
-                                 style="width: 40%">40% Complete (To Do)</div>
-                        </div>
-
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-info" role="progressbar"
-                                 aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-                                 style="width: 50%">50% Complete (Working)</div>
-                        </div>
-
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-warning" role="progressbar"
-                                 aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                                 style="width: 60%">60% Complete (Done)</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--/. Main container ends -->
+					<div class="progress">
+						<div class="progress-bar progress-bar-warning" role="progressbar"
+							aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+							style="width: 60%">60% Complete (Done)</div>
+					</div>
+					<a href="" class="btn btn-warning">Done</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--/. Main container ends -->
 	<!-- Footer -->
 	<footer class="navbar-inverse navbar-fixed-bottom">
 		<div class="container-fluid">
