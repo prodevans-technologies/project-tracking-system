@@ -41,8 +41,7 @@
 				<ul class="nav navbar-nav navbar-right">
 					<li class="active"><a href='<c:url value="/kanban"></c:url>'>Kanban
 							Board</a></li>
-					<li><a href='<c:url value="/employee"></c:url>'>Employee</a>
-					</li>
+					<li><a href='<c:url value="/employee"></c:url>'>Employee</a></li>
 
 					<li><a href='<c:url value="/create-project"></c:url>'>Create
 							Project</a></li>
@@ -91,13 +90,14 @@
 							aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
 							style="width: 60%">60% Complete (Done)</div>
 					</div>
-					<a href="" class="btn btn-warning">Done</a>
-                </div>
-			
+					<a href='<c:url value="/project-dashboard"></c:url>'
+						class="btn btn-success">Done</a>
+				</div>
+
 			</div>
 
 		</div>
-      <div class="col-md-4">
+		<div class="col-md-4">
 			<div class="panel panel-default ">
 				<div class="panel-heading">Project 2</div>
 				<div class="panel-body">
@@ -117,9 +117,9 @@
 						<div class="progress-bar progress-bar-warning" role="progressbar"
 							aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
 							style="width: 60%">60% Complete (Done)</div>
-					</div>
-        <a href="" class="btn btn-warning">Done</a>
-
+				</div>
+					<a href='<c:url value="/project-dashboard"></c:url>'
+						class="btn btn-success">Done</a>
 				</div>
 			</div>
 		</div>
@@ -143,10 +143,9 @@
 						<div class="progress-bar progress-bar-warning" role="progressbar"
 							aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
 							style="width: 60%">60% Complete (Done)</div>
-					</div>
-					<a href="" class="btn btn-warning">Done</a>
-
-
+				</div>
+					<a href='<c:url value="/project-dashboard"></c:url>'
+						class="btn btn-success">Done</a>
 				</div>
 			</div>
 
@@ -173,7 +172,8 @@
 							aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
 							style="width: 60%">60% Complete (Done)</div>
 					</div>
-					<a href="" class="btn btn-warning">Done</a>
+					<a href='<c:url value="/project-dashboard"></c:url>'
+						class="btn btn-success">Done</a>
 				</div>
 			</div>
 		</div>
@@ -197,7 +197,8 @@
 							aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
 							style="width: 60%">60% Complete (Done)</div>
 					</div>
-					<a href="" class="btn btn-warning">Done</a>
+					<a href='<c:url value="/project-dashboard"></c:url>'
+						class="btn btn-success">Done</a>
 				</div>
 			</div>
 		</div>
@@ -221,9 +222,7 @@
 						<div class="progress-bar progress-bar-warning" role="progressbar"
 							aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
 							style="width: 60%">60% Complete (Done)</div>
-					</div>
-					<a href="" class="btn btn-warning">Done</a>
-				</div>
+					
 			</div>
 		</div>
 	</div>
