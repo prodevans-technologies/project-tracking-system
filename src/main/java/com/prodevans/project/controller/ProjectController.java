@@ -17,9 +17,14 @@ private static final Logger logger = LoggerFactory.getLogger(ProjectController.c
 	 * @return ProjectController
 	 */
 	@RequestMapping(value = "/create-project", method = RequestMethod.GET)
-	public String getProjectController(Model model) {
+	public String getProjects(Model model) {
 		logger.info("Welcome to create  project ");
 		return "create-project";
+	}
+	@RequestMapping(value = "/project-dashboard", method = RequestMethod.GET)
+	public String getProjectDashboard(Model model) {
+		logger.info("Welcome to create  project ");
+		return "project-dashboard";
 	}
 	
 }
