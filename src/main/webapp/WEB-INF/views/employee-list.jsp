@@ -83,6 +83,116 @@
 
 	<!-- Main container -->
 	<div class="container">
+	<h2>Employee List</h2>          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Employee Id</th>
+        <th>Employee Name</th>
+        <th>Designation</th>
+        <th>Date of Joining</th>
+        <th colspan="2"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>John</td>
+        <td>Software Tester</td>
+          <td>31-05-2017</td>
+        <td> <a href="" class="btn btn-warning">Update </a></td>
+        <td> <a href="" class="btn btn-danger">Delete </a></td>
+        
+		</tr>
+      <tr>
+      <td>2</td>
+        <td>Karun</td>
+        <td>System Analyst</td>
+          <td>25-03-2017</td>
+          <td> <a href="" class="btn btn-warning">Update </a></td>
+        <td> <a href="" class="btn btn-danger">Delete </a></td>
+        
+      </tr>
+      <tr>
+       <td>3</td>
+        <td>Priya</td>
+        <td>Web Developer</td>
+          <td>30-01-2017</td>
+          <td> <a href="" class="btn btn-warning">Update </a></td>
+        <td> <a href="" class="btn btn-danger">Delete </a></td>
+      </tr>
+      <tr>
+      <td>4</td>
+        <td>Karthik</td>
+        <td>Busines Analyst</td>
+          <td>01-10-2017</td>
+          <td> <a href="" class="btn btn-warning">Update </a></td>
+        <td> <a href="" class="btn btn-danger">Delete </a></td>
+          </tr>
+          <tr>
+          <td>5</td>
+        <td>Roopa</td>
+        <td>Network Engineer</td>
+          <td>02-11-2017</td>
+          <td> <a href="" class="btn btn-warning">Update </a></td>
+        <td> <a href="" class="btn btn-danger">Delete </a></td>
+          </tr>
+          <tr>
+          <td>6</td>
+        <td>Jimit</td>
+        <td>Technical consultant</td>
+          <td>10-03-2017</td>
+          <td> <a href="" class="btn btn-warning">Update </a></td>
+        <td> <a href="" class="btn btn-danger">Delete </a></td>
+          </tr>
+           <tr>
+        <td>7</td>
+        <td>Likhitha</td>
+        <td>Software Tester</td>
+          <td>21-01-2017</td>
+          <td> <a href="" class="btn btn-warning">Update </a></td>
+        <td> <a href="" class="btn btn-danger">Delete </a></td>
+      </tr>
+       <tr>
+        <td>8</td>
+        <td>Arun</td>
+        <td>Trainee Engineer</td>
+          <td>15-12-2017</td>
+          <td> <a href="" class="btn btn-warning">Update </a></td>
+        <td> <a href="" class="btn btn-danger">Delete </a></td>
+      </tr>
+       <tr>
+        <td>9</td>
+        <td>Poojitha</td>
+        <td>Project Manager</td>
+          <td>25-12-2017</td>
+          <td> <a href="" class="btn btn-warning">Update </a></td>
+        <td> <a href="" class="btn btn-danger">Delete </a></td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>Ram</td>
+        <td>Project Lead</td>
+          <td>10-09-2017</td>
+          <td> <a href="" class="btn btn-warning">Update </a></td>
+        <td> <a href="" class="btn btn-danger">Delete </a></td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>George</td>
+        <td>Program Manager</td>
+          <td>11-08-2017</td>
+          <td> <a href="" class="btn btn-warning">Update </a></td>
+        <td> <a href="" class="btn btn-danger">Delete </a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+	
+	
+	
+	
+	
 	
 	
 	</div>
