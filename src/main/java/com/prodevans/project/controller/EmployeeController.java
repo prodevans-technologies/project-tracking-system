@@ -17,9 +17,14 @@ private static final Logger logger = LoggerFactory.getLogger(EmployeeController.
 	 * @return Employee
 	 */
 	@RequestMapping(value = "/employee", method = RequestMethod.GET)
-	public String getEmployeeController(Model model) {
+	public String getEmployees(Model model) {
+		logger.info("Welcome to Employee-Controller");
+		return "employee-list";
+	}
+
+	@RequestMapping(value = "/create-employee", method = RequestMethod.GET)
+	public String createEmployee(Model model) {
 		logger.info("Welcome to Employee-Controller");
 		return "employee";
 	}
-
 }

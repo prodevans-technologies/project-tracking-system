@@ -43,8 +43,7 @@
 						<a href='<c:url value="/kanban"></c:url>' >Kanban Board</a>
 					</li>
 					<li >
-						<a	href='<c:url value="/employee"></c:url>' >Create
-							Employee</a>
+						<a	href='<c:url value="/employee"></c:url>' >Employee</a>
 					</li>
 					
 					<li >
