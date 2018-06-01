@@ -52,6 +52,7 @@
 
 </head>
 <body>
+
 	<!-- Static navbar -->
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
@@ -68,6 +69,7 @@
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href='<c:url value="/kanban"></c:url>'>Kanban Board</a></li>
+					<li><a href='<c:url value="/task"></c:url>'>Create Task</a></li>
 					<li class="dropdown" style="margin-left: 10px">
 						<button href="#" class="btn btn-success navbar-btn" type="button"
 							data-toggle="dropdown" role="button" aria-haspopup="true"
@@ -90,15 +92,20 @@
 
 	<!-- Main container -->
 	<div class="container">
-		<div class="panel panel-primary">
-			<div class="panel-heading">To Do</div>
-			<div class="panel-body">Open Stack</div>
-			<div class="input-append date" id="datetimepicker"
-				data-date="12th jun" data-date-format="dd-mm">
-				<input class="span2" size="16" type="text" value="12th jun">
-				<span class="add-on"><i class="icon-th"></i></span>
+		<div class="col-md-4">
+
+			<div class="panel panel-primary">
+				<div class="panel-heading">To Do</div>
+				<div class="panel-body">
+					<div class="alert alert-info">
+						<span class="label label-danger">Bug</span>
+						<h4>Login page having issue</h4>
+					</div>
+				</div>
 			</div>
 
+		</div>
+		<div class="col-md-4">
 			<div class="panel panel-primary">
 				<div class="panel-heading">In Progress</div>
 				<div class="panel-body">Open Stack</div>
@@ -107,31 +114,37 @@
 					<input class="span2" size="16" type="text" value="14th jun">
 					<span class="add-on"><i class="icon-th"></i></span>
 				</div>
-				<div class="panel panel-primary">
-					<div class="panel-heading">Done</div>
-					<div class="panel-body">Open Stack</div>
-					<div class="input-append date" id="datetimepicker"
-						data-date="20th jun" data-date-format="dd-mm">
-						<input class="span2" size="16" type="text" value="20th jun">
-						<span class="add-on"><i class="icon-th"></i></span>
-					</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="panel panel-primary">
+				<div class="panel-heading">Done</div>
+				<div class="panel-body">Open Stack</div>
+				<div class="input-append date" id="datetimepicker"
+					data-date="20th jun" data-date-format="dd-mm">
+					<input class="span2" size="16" type="text" value="20th jun">
+					<span class="add-on"><i class="icon-th"></i></span>
 				</div>
 			</div>
 
-			<!-- Footer -->
-			<footer class="navbar-inverse navbar-fixed-bottom">
-				<div class="container-fluid">
-					<div class="company_name">All &copy; reserved by Prodevans
-						Technologies LLP</div>
-					<div></div>
+		</div>
+	</div>
 
-				</div>
-			</footer>
 
-			<!-- Scripts Section -->
-			<c:url value="/bootstrap/js/jquery-3.3.1.min.js" var="jquery_js"></c:url>
-			<script type="text/javascript" src="${jquery_js }"></script>
-			<c:url value="/bootstrap/js/bootstrap.min.js" var="bootstrap_js"></c:url>
-			<script type="text/javascript" src="${bootstrap_js }"></script>
+	<!-- Footer -->
+	<footer class="navbar-inverse navbar-fixed-bottom">
+		<div class="container-fluid">
+			<div class="company_name">All &copy; reserved by Prodevans
+				Technologies LLP</div>
+			<div></div>
+
+		</div>
+	</footer>
+
+	<!-- Scripts Section -->
+	<c:url value="/bootstrap/js/jquery-3.3.1.min.js" var="jquery_js"></c:url>
+	<script type="text/javascript" src="${jquery_js }"></script>
+	<c:url value="/bootstrap/js/bootstrap.min.js" var="bootstrap_js"></c:url>
+	<script type="text/javascript" src="${bootstrap_js }"></script>
 </body>
 </html>

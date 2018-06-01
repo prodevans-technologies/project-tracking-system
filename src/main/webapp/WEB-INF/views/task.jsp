@@ -4,6 +4,7 @@
 <!DOCTYPE html >
 <html>
 <head>
+
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Profile Management</title>
 <meta name="viewport"
@@ -58,17 +59,14 @@
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href='<c:url value="/kanban"></c:url>'>Kanban Board</a></li>
-        
 					<li class="dropdown" style="margin-left: 10px">
 						<button href="#" class="btn btn-success navbar-btn" type="button"
 							data-toggle="dropdown" role="button" aria-haspopup="true"
 							aria-expanded="false">
-							<li><a href='<c:url value="/kanban"></c:url>'>Kanban
-									Board</a></li> Hi... Admin <span class="caret"></span>
+							Hi... Admin <span class="caret"></span>
 						</button>
 						<ul class="dropdown-menu">
 							<li><a href='<c:url value="/profile" />'>Profile</a></li>
-
 							<li><a href="#">Change Password</a></li>
 						</ul>
 					</li>
@@ -83,57 +81,94 @@
 
 	<!-- Main container -->
 	<div class="container">
+
 		<div class="panel panel-info">
-			<div class="panel-heading">Screen project</div>
+			<div class="panel-heading">task project</div>
 			<div class="panel-body">
 
 				<form class="form-horizontal" action="/action_page.php">
+					
 					<div class="form-group">
-						<label class="control-label col-sm-2" for="email">Project
-							Id:</label>
-						<div class="col-sm-10">
-							<input type="text" class="form-control" id="id1"
-								placeholder="Enter id">
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="control-label col-sm-2" for="pwd">Project
-							Name:</label>
+						<label class="control-label col-sm-2" for="pwd">Task Name:</label>
 						<div class="col-sm-10">
 							<input type="text" class="form-control" id="id2"
-								placeholder="Enter pro name">
+								placeholder="Enter  name">
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="control-label col-sm-2" for="email">Project
+						<label class="control-label col-sm-2" for="email">Task
+							Assigndate:</label>
+						<div class="col-sm-10">
+							<input type="date" class="form-control" id="id3"
+								placeholder="Enter date">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="pwd">Task
+							Person:</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="id2"
+								placeholder="Enter person name">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="pwd">Emp Id:</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="id2"
+								placeholder="Enter  id">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="pwd">Task
 							Description:</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" id="id3"
-								placeholder="Enter des">
+							<input type="text" class="form-control" id="id2"
+								placeholder="Enter  des">
 						</div>
 					</div>
+					
 					<div class="form-group">
-						<label class="control-label col-sm-2" for="pwd">Project
-							Type:</label>
+						<label class="control-label col-sm-2" for="pwd">Task Type:</label>
 						<div class="col-sm-10">
+
+
 							<select class="form-control" id="sel1">
-								<option>business</option>
-								<option>normal</option>
-								<option>web app</option>
+								<option>Issue</option>
+								<option>Bug</option>
+								<option>User Story</option>
 
 							</select>
 						</div>
+
 					</div>
-					<div class="checkbox">
-						<div class="col-ms-2">
-							<button type="submit" class="btn btn-primary">Submit</button>
+
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="pwd">Task
+							Status:</label>
+						<div class="col-sm-10">
+
+
+							<select class="form-control" id="sel1">
+								<option>To Do</option>
+								<option>InProgress</option>
+								<option>Done</option>
+
+							</select>
 						</div>
+
 					</div>
-				</form>
+			
+			<div class="checkbox">
+				<div class="col-ms-2">
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</div>
+			</div>
+			</form>
 			</div>
 		</div>
-
 	</div>
+
+	
 
 	<!-- Footer -->
 	<footer class="navbar-inverse navbar-fixed-bottom">
