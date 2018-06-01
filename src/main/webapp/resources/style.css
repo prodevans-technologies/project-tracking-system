@@ -10,4 +10,50 @@ footer .company_name {
     color: #fff;
 }
 
-	
+/**
+* Task stylesheet
+*/
+.task-list > .panel-heading{
+    font-size: 18px;
+    text-align: center;
+}
+
+.task-container {
+    background-image: unset !important;
+    background-color: #fff;
+    background-repeat: repeat-x;
+    border: 1px solid #9ea4a7;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.task-container > .col-md-12, .task-container > .col-md-12 > .col-md-6 {
+    padding: unset !important;
+}
+
+.task-title{
+    font-size: 18px;
+    margin: 10px 0px;
+}
+
+.task-alert-label{
+    padding: 4px 20px;
+}
+
+.task-info-date{
+    color: #9ea4a7;
+}
+
+.task-info-assigne{
+    color: #9ea4a7;
+    text-align: right;
+}
+
+
+/*
+* Class for the adding the plank space in the UI.
+*/
+.seperator{
+    padding: 20px;
+}
