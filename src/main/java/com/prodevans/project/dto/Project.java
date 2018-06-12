@@ -1,8 +1,5 @@
 package com.prodevans.project.dto;
 
-import java.util.Date;
-import java.util.date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,8 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Project Table")
-
+@Table(name = "project_table")
 public class Project {
 
 	@Id
@@ -56,7 +52,7 @@ public class Project {
 	}
 
 	public void setPro_id(int Pro_id) {
-		this.pro_id = pro_id;
+		this.pro_id = Pro_id;
 	}
 
 	public String getPro_name() {
@@ -79,13 +75,13 @@ public class Project {
 		return pro_type;
 	}
 
-public void setPro_type(String pro_type) {
-	this.pro_type = pro_type;
-}
+	public void setPro_type(String pro_type) {
+		this.pro_type = pro_type;
+	}
 
-@Override
-public String toString() {
-	return "Project [pro_id=" + pro_id + ", pro_name=" + pro_name + ", pro_description=" + pro_description
-			+ ", pro_type=" + pro_type + "]";
-}
+	@Override
+	public String toString() {
+		return "Project [pro_id=" + pro_id + ", pro_name=" + pro_name + ", pro_description=" + pro_description
+				+ ", pro_type=" + pro_type + "]";
+	}
 }

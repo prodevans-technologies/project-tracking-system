@@ -71,7 +71,7 @@ public class ProjectdaoImpl implements Projectdao {
 	}
 
 	@Override
-	public Integer deleteProject(Integer employee_id) {
+	public Integer deleteProject(Integer project_id) {
 		Session session = sessionFactory.openSession();
 		Transaction tx = session.beginTransaction();
 		int result = 0;
@@ -103,7 +103,7 @@ public class ProjectdaoImpl implements Projectdao {
 		Transaction tx = session.beginTransaction();
 
 		try {
-			Projects = session.createCriteria(Project.class).list();
+			project = session.createCriteria(Project.class).list();
 			tx.commit();
 			session.close();
 
@@ -114,17 +114,17 @@ public class ProjectdaoImpl implements Projectdao {
 			session.close();
 		}
 
-		return projects;
+		return project;
 	}
 
 	@Override
 	public Project getProjectById(Integer project_id) {
 		Session session = sessionFactory.openSession();
 		Transaction tx = session.beginTransaction();
-		Project emp = null;
+		Project project = null;
 		try {
 			if (project_id != 0) {
-				pro = session.get(Project.class,project_id);
+				project = session.get(Project.class,project_id);
 				tx.commit();
 				session.close();
 			}
@@ -135,7 +135,7 @@ public class ProjectdaoImpl implements Projectdao {
 			tx.rollback();
 			session.close();
 		}
-		return pro;
+		return project;
 	}
 
 }
