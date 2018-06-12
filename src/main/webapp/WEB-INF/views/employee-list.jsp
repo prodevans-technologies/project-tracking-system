@@ -57,9 +57,8 @@
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href='<c:url value="/kanban"></c:url>'>Kanban
-							Board</a></li>
-					<li><a href='<c:url value="/create-employee"></c:url>'>Create 
+					<li><a href='<c:url value="/kanban"></c:url>'>Kanban Board</a></li>
+					<li><a href='<c:url value="/employee/create-employee"></c:url>'>Create
 							Employee</a></li>
 					<li class="dropdown" style="margin-left: 10px">
 						<button href="#" class="btn btn-success navbar-btn" type="button"
@@ -83,119 +82,39 @@
 
 	<!-- Main container -->
 	<div class="container">
-	<h2>Employee List</h2>          
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Employee Id</th>
-        <th>Employee Name</th>
-        <th>Designation</th>
-        <th>Date of Joining</th>
-        <th colspan="2"></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>John</td>
-        <td>Software Tester</td>
-          <td>31-05-2017</td>
-        <td> <a href="" class="btn btn-warning">Update </a></td>
-        <td> <a href="" class="btn btn-danger">Delete </a></td>
-        
-		</tr>
-      <tr>
-      <td>2</td>
-        <td>Karun</td>
-        <td>System Analyst</td>
-          <td>25-03-2017</td>
-          <td> <a href="" class="btn btn-warning">Update </a></td>
-        <td> <a href="" class="btn btn-danger">Delete </a></td>
-        
-      </tr>
-      <tr>
-       <td>3</td>
-        <td>Priya</td>
-        <td>Web Developer</td>
-          <td>30-01-2017</td>
-          <td> <a href="" class="btn btn-warning">Update </a></td>
-        <td> <a href="" class="btn btn-danger">Delete </a></td>
-      </tr>
-      <tr>
-      <td>4</td>
-        <td>Karthik</td>
-        <td>Busines Analyst</td>
-          <td>01-10-2017</td>
-          <td> <a href="" class="btn btn-warning">Update </a></td>
-        <td> <a href="" class="btn btn-danger">Delete </a></td>
-          </tr>
-          <tr>
-          <td>5</td>
-        <td>Roopa</td>
-        <td>Network Engineer</td>
-          <td>02-11-2017</td>
-          <td> <a href="" class="btn btn-warning">Update </a></td>
-        <td> <a href="" class="btn btn-danger">Delete </a></td>
-          </tr>
-          <tr>
-          <td>6</td>
-        <td>Jimit</td>
-        <td>Technical consultant</td>
-          <td>10-03-2017</td>
-          <td> <a href="" class="btn btn-warning">Update </a></td>
-        <td> <a href="" class="btn btn-danger">Delete </a></td>
-          </tr>
-           <tr>
-        <td>7</td>
-        <td>Likhitha</td>
-        <td>Software Tester</td>
-          <td>21-01-2017</td>
-          <td> <a href="" class="btn btn-warning">Update </a></td>
-        <td> <a href="" class="btn btn-danger">Delete </a></td>
-      </tr>
-       <tr>
-        <td>8</td>
-        <td>Arun</td>
-        <td>Trainee Engineer</td>
-          <td>15-12-2017</td>
-          <td> <a href="" class="btn btn-warning">Update </a></td>
-        <td> <a href="" class="btn btn-danger">Delete </a></td>
-      </tr>
-       <tr>
-        <td>9</td>
-        <td>Poojitha</td>
-        <td>Project Manager</td>
-          <td>25-12-2017</td>
-          <td> <a href="" class="btn btn-warning">Update </a></td>
-        <td> <a href="" class="btn btn-danger">Delete </a></td>
-      </tr>
-      <tr>
-        <td>10</td>
-        <td>Ram</td>
-        <td>Project Lead</td>
-          <td>10-09-2017</td>
-          <td> <a href="" class="btn btn-warning">Update </a></td>
-        <td> <a href="" class="btn btn-danger">Delete </a></td>
-      </tr>
-      <tr>
-        <td>11</td>
-        <td>George</td>
-        <td>Program Manager</td>
-          <td>11-08-2017</td>
-          <td> <a href="" class="btn btn-warning">Update </a></td>
-        <td> <a href="" class="btn btn-danger">Delete </a></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-	
-	
-	
-	
-	
-	
-	
+		<c:if test="${ not empty message}">
+				<div class="alert alert-danger">${message}</div>
+			</c:if>
+		<h2>Employee List</h2>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Employee Id</th>
+					<th>Employee Name</th>
+					<th>Designation</th>
+					<th>Date of Joining</th>
+					<th colspan="2"></th>
+				</tr>
+			</thead>
+			<tbody>
+				<c:forEach items="${employees}" var="employee">
+					<tr>
+						<td>${employee.emp_id}</td>
+						<td>${employee.emp_name}</td>
+						<td>${employee.emp_designation}</td>
+						<td>${employee.join_date}</td>
+						<c:url value="/employee/delete/${employee.emp_id}" var="del_emp" />
+						<c:url value="/employee/update/${employee.emp_id}" var="update_emp" />
+						<td><a href="${update_emp}" class="btn btn-warning">Update </a></td>
+						<td><a href="${del_emp}" class="btn btn-danger">Delete </a></td>
+						<c:remove var="del_emp"/>
+						<c:remove var="update_emp" />	
+					</tr>
+				</c:forEach>
+			</tbody>
+		</table>
 	</div>
+
 	<!-- Footer -->
 	<footer class="navbar-inverse navbar-fixed-bottom">
 		<div class="container-fluid">

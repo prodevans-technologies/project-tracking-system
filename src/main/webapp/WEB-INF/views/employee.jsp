@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html >
 <html>
 <head>
@@ -45,7 +46,7 @@
 	<!-- Static navbar -->
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
-		<div class="navbar-header">
+			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed"
 					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
 					aria-controls="navbar">
@@ -57,9 +58,7 @@
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li >
-						<a href='<c:url value="/kanban"></c:url>' >Kanban Board</a>
-					</li>
+					<li><a href='<c:url value="/kanban"></c:url>'>Kanban Board</a></li>
 					<li class="dropdown" style="margin-left: 10px">
 						<button href="#" class="btn btn-success navbar-btn" type="button"
 							data-toggle="dropdown" role="button" aria-haspopup="true"
@@ -80,72 +79,91 @@
 
 	<!--/. Navigation bar end -->
 
-<div class="container">
+	<div class="container">
 		<div class="container">
 			<div class="panel panel-default">
 				<div class="panel-heading">Employee</div>
 				<div class="panel-body">
-				
-				
-					<form>
+						<!-- Code for identifying the operation -->
+						<c:if test="${employee_mothod == 'update' }" >
+							<c:url value="/employee/update-employee" var="create_emp" ></c:url>
+						</c:if>
+						<c:if test="${employee_mothod != 'update' }" >
+							<c:url value="/employee/create-employee" var="create_emp" ></c:url>
+						</c:if>
+					
+					<form:form action="${create_emp}" method="POST"
+						modelAttribute="employee_object">
 						<div class="form-group row">
 							<label for="inputName3" class="col-sm-2 col-form-label">Emp_ID</label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control" id="inputName3"
-									placeholder="Enter Your Employee_ID">
+								<form:input path="emp_id" type="text" class="form-control"
+									id="inputName3" placeholder="Enter Your Employee_ID"></form:input>
 							</div>
 						</div>
 						<div class="form-group row">
 							<label for="inputName3" class="col-sm-2 col-form-label">Emp_Name</label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control" id="inputName3"
-									placeholder="Enter Your Name">
+								<form:input path="emp_name" type="text" class="form-control"
+									id="inputName3" placeholder="Enter Your Name"></form:input>
 							</div>
 						</div>
 						<div class="form-group row">
 							<label for="inputEmail3" class="col-sm-2 col-form-label">Emp_Email</label>
 							<div class="col-sm-10">
-								<input type="email" class="form-control" id="inputEmail3"
-									placeholder="Employee-Email">
+								<form:input path="emp_email" type="email" class="form-control"
+									id="inputEmail3" placeholder="Employee-Email"></form:input>
 							</div>
 						</div>
 						<div class="form-group row">
 							<label for="inputPassword3" class="col-sm-2 col-form-label">Emp_Designation</label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control" id="inputPassword3"
-									placeholder="Enter your Designation">
+								<form:input path="emp_designation" type="text"
+									class="form-control" id="inputPassword3"
+									placeholder="Enter your Designation"></form:input>
 							</div>
 						</div>
 						<div class="form-group row">
 							<label for="inputAddress3" class="col-sm-2 col-form-label">Emp_Address</label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control" id="inputAddress3"
-									placeholder="Enter Your Address">
+								<form:input path="emp_address" type="text" class="form-control"
+									id="inputAddress3" placeholder="Enter Your Address"></form:input>
 							</div>
 						</div>
 						<div class="form-group row">
 							<label for="inputPhoneNumber3" class="col-sm-2 col-form-label">Emp_PhoneNumber</label>
 							<div class="col-sm-10">
-								<input type="text" class="form-control" id="inputPhoneNumber3"
-									placeholder="Enter Your PhoneNumber">
+								<form:input path="emp_phno" type="text" class="form-control"
+									id="inputPhoneNumber3" placeholder="Enter Your PhoneNumber"></form:input>
 							</div>
-								</div>
-								<div class="form-group row">
+						</div>
+						<div class="form-group row">
 							<label for="inputName3" class="col-sm-2 col-form-label">Join_Date</label>
 							<div class="col-sm-10">
-								<input type="Date" class="form-control" id="inputName3"
-									placeholder="Company Joined Date">
+								<form:input path="join_date" type="text" class="form-control"
+									id="inputName3" placeholder="Company Joined Date"></form:input>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="inputName3" class="col-sm-2 col-form-label">Password</label>
+							<div class="col-sm-10">
+								<form:input path="password" type="password" class="form-control"
+									id="inputName3" placeholder="******************"></form:input>
 							</div>
 						</div>
 						<button type="submit" class="btn btn-default">Submit</button>
-					</form>
+					</form:form>
 				</div>
 			</div>
+
+			<c:if test="${ not empty message}">
+				<div class="alert alert-danger">${message}</div>
+			</c:if>
 		</div>
 	</div>
-				
-				
-				
+
+
+
 	<!-- Footer -->
 	<footer class="navbar-inverse navbar-fixed-bottom">
 		<div class="container-fluid">

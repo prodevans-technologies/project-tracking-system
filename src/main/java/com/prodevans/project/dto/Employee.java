@@ -9,6 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 @Entity
 @Table(name = "employee_table")
 public class Employee {
@@ -35,6 +37,7 @@ public class Employee {
 	@Column(name="emp_address")
 	private String emp_address;
 	
+	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	@Column(name="join_date")
 	private Date join_date;
 	
