@@ -58,7 +58,8 @@
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href='<c:url value="/kanban"></c:url>'>Kanban Board</a></li>
-					<li><a href='<c:url value="/employee/create-employee"></c:url>'>Create
+					<li><a
+						href='<c:url value="/employee/create-employee"></c:url>'>Create
 							Employee</a></li>
 					<li class="dropdown" style="margin-left: 10px">
 						<button href="#" class="btn btn-success navbar-btn" type="button"
@@ -83,8 +84,8 @@
 	<!-- Main container -->
 	<div class="container">
 		<c:if test="${ not empty message}">
-				<div class="alert alert-danger">${message}</div>
-			</c:if>
+			<div class="alert alert-danger">${message}</div>
+		</c:if>
 		<h2>Employee List</h2>
 		<table class="table">
 			<thead>
@@ -104,11 +105,13 @@
 						<td>${employee.emp_designation}</td>
 						<td>${employee.join_date}</td>
 						<c:url value="/employee/delete/${employee.emp_id}" var="del_emp" />
-						<c:url value="/employee/update/${employee.emp_id}" var="update_emp" />
-						<td><a href="${update_emp}" class="btn btn-warning">Update </a></td>
+						<c:url value="/employee/update/${employee.emp_id}"
+							var="update_emp" />
+						<td><a href="${update_emp}" class="btn btn-warning">Update
+						</a></td>
 						<td><a href="${del_emp}" class="btn btn-danger">Delete </a></td>
-						<c:remove var="del_emp"/>
-						<c:remove var="update_emp" />	
+						<c:remove var="del_emp" />
+						<c:remove var="update_emp" />
 					</tr>
 				</c:forEach>
 			</tbody>

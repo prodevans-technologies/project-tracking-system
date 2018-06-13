@@ -43,7 +43,7 @@
 							Board</a></li>
 					<li><a href='<c:url value="/employee"></c:url>'>Employee</a></li>
 
-					<li><a href='<c:url value="/create-project"></c:url>'>Create
+					<li><a href='<c:url value="/project/create-project"></c:url>'>Create
 							Project</a></li>
 
 					<li class="dropdown" style="margin-left: 10px">

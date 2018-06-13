@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html >
 <html>
 <head>
@@ -63,8 +64,7 @@
 						<button href="#" class="btn btn-success navbar-btn" type="button"
 							data-toggle="dropdown" role="button" aria-haspopup="true"
 							aria-expanded="false">
-							<li><a href='<c:url value="/kanban"></c:url>'>Kanban
-									Board</a></li> Hi... Admin <span class="caret"></span>
+							 Hi... Admin <span class="caret"></span>
 						</button>
 						<ul class="dropdown-menu">
 							<li><a href='<c:url value="/profile" />'>Profile</a></li>
@@ -86,42 +86,40 @@
 		<div class="panel panel-info">
 			<div class="panel-heading">Screen project</div>
 			<div class="panel-body">
-
-				<form class="form-horizontal" action="/action_page.php">
+				<c:url value="/project/create-project" var="project_create_link"></c:url>
+				<form:form class="form-horizontal" action="${project_create_link }" method="POST" modelAttribute="project_object">
 					<div class="form-group">
-						<label class="control-label col-sm-2" for="email">Project
-							Id:</label>
+						<label class="control-label col-sm-2" for="email">Project Id:</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" id="id1"
-								placeholder="Enter id">
+							<form:input path="pro_id" type="text" class="form-control" id="id1"
+								placeholder="Enter id" />
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="control-label col-sm-2" for="pwd">Project
 							Name:</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" id="id2"
-								placeholder="Enter pro name">
+							<form:input path="pro_name" type="text" class="form-control" id="id2"
+								placeholder="Enter pro name" />
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="control-label col-sm-2" for="email">Project
 							Description:</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" id="id3"
-								placeholder="Enter des">
+							<form:input path="pro_description" type="text" class="form-control" id="id3"
+								placeholder="Enter des" />
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="control-label col-sm-2" for="pwd">Project
 							Type:</label>
 						<div class="col-sm-10">
-							<select class="form-control" id="sel1">
-								<option>business</option>
-								<option>normal</option>
-								<option>web app</option>
-
-							</select>
+							<form:select path="pro_type" class="form-control" id="sel1">
+								<form:option value=""></form:option>
+								<form:option value="Agile">Agile</form:option>
+								<form:option value="Scrum">Scrum</form:option>
+							</form:select>
 						</div>
 					</div>
 					<div class="checkbox">
@@ -129,7 +127,7 @@
 							<button type="submit" class="btn btn-primary">Submit</button>
 						</div>
 					</div>
-				</form>
+				</form:form>
 			</div>
 		</div>
 
