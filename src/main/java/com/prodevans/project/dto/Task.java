@@ -27,9 +27,6 @@ public class Task {
 	@Column(name = "task_person", length = 100)
 	private String task_person;
 
-	@Column(name = "emp_id")
-	private int emp_id;
-
 	@Column(name = "task_status")
 	private String task_status;
 
@@ -39,8 +36,6 @@ public class Task {
 	@Column(name = "task_description")
 	private String task_description;
 
-	@Column(name = "project_id")
-	private int project_id;
 
 	/**
 	 * Default constructrue for the task
@@ -69,11 +64,11 @@ public class Task {
 		this.task_name = task_name;
 		this.task_assigndate = task_assigndate;
 		this.task_person = task_person;
-		this.emp_id = emp_id;
+		
 		this.task_status = task_status;
 		this.task_type = task_type;
 		this.task_description = task_description;
-		this.project_id = project_id;
+		
 	}
 
 	public int getTask_id() {
@@ -108,13 +103,7 @@ public class Task {
 		this.task_person = task_person;
 	}
 
-	public int getEmp_id() {
-		return emp_id;
-	}
-
-	public void setEmp_id(int emp_id) {
-		this.emp_id = emp_id;
-	}
+	
 
 	public String getTask_status() {
 		return task_status;
@@ -140,19 +129,13 @@ public class Task {
 		this.task_description = task_description;
 	}
 
-	public int getProject_id() {
-		return project_id;
-	}
-
-	public void setProject_id(int project_id) {
-		this.project_id = project_id;
-	}
-
 	@Override
 	public String toString() {
 		return "Task [task_id=" + task_id + ", task_name=" + task_name + ", task_assigndate=" + task_assigndate
-				+ ", task_person=" + task_person + ", emp_id=" + emp_id + ", task_status=" + task_status
-				+ ", task_type=" + task_type + ", task_description=" + task_description + ", project_id=" + project_id
-				+ "]";
+				+ ", task_person=" + task_person + ", task_status=" + task_status + ", task_type=" + task_type
+				+ ", task_description=" + task_description + "]";
 	}
+
+	
+	
 }

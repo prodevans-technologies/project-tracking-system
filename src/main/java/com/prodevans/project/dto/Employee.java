@@ -1,13 +1,21 @@
 package com.prodevans.project.dto;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import javax.persistence.JoinColumn;
+
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -41,12 +49,18 @@ public class Employee {
 	@Column(name="join_date")
 	private Date join_date;
 	
+	@OneToMany(cascade=CascadeType.ALL)
+	@JoinTable(name="employee_task_table",joinColumns=@JoinColumn(name="emp_id"),inverseJoinColumns=@JoinColumn(name="task_id"))
+	private List<Task> task_list = new ArrayList<>();
+	
 	/**
 	 * Default constructrue for the employees 
 	 */
 	public Employee() {
 		super();
 	}
+
+	
 
 	/**
 	 * @param emp_id
@@ -57,9 +71,10 @@ public class Employee {
 	 * @param emp_phno
 	 * @param emp_address
 	 * @param join_date
+	 * @param task_list
 	 */
 	public Employee(int emp_id, String emp_email, String password, String emp_name, String emp_designation,
-			String emp_phno, String emp_address, Date join_date) {
+			String emp_phno, String emp_address, Date join_date, List<Task> task_list) {
 		super();
 		this.emp_id = emp_id;
 		this.emp_email = emp_email;
@@ -69,7 +84,10 @@ public class Employee {
 		this.emp_phno = emp_phno;
 		this.emp_address = emp_address;
 		this.join_date = join_date;
+		this.task_list = task_list;
 	}
+
+
 
 	public int getEmp_id() {
 		return emp_id;
@@ -135,11 +153,21 @@ public class Employee {
 		this.join_date = join_date;
 	}
 
+	public List<Task> getTask_list() {
+		return task_list;
+	}
+
+	public void setTask_list(List<Task> task_list) {
+		this.task_list = task_list;
+	}
+
 	@Override
 	public String toString() {
 		return "Employee [emp_id=" + emp_id + ", emp_email=" + emp_email + ", password=" + password + ", emp_name="
 				+ emp_name + ", emp_designation=" + emp_designation + ", emp_phno=" + emp_phno + ", emp_address="
-				+ emp_address + ", join_date=" + join_date + "]";
+				+ emp_address + ", join_date=" + join_date + ", task_list=" + task_list + "]";
 	}
+
+	
 	
 }

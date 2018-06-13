@@ -1,10 +1,17 @@
 package com.prodevans.project.dto;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -24,6 +31,10 @@ public class Project {
 
 	@Column(name = "pro_type")
 	private String pro_type;
+	
+	@OneToMany(cascade=CascadeType.ALL)
+	@JoinTable(name="project_task_table",joinColumns=@JoinColumn(name="pro_id"),inverseJoinColumns=@JoinColumn(name="task_id"))
+	private List<Task> task_list = new ArrayList<>();
 
 	/**
 	 * Default constructor for the projects
@@ -32,20 +43,25 @@ public class Project {
 		super();
 	}
 
+	
+
 	/**
 	 * @param pro_id
 	 * @param pro_name
 	 * @param pro_description
 	 * @param pro_type
+	 * @param task_list
 	 */
-
-	public Project(int pro_id, String pro_name, String pro_description, String pro_type) {
+	public Project(int pro_id, String pro_name, String pro_description, String pro_type, List<Task> task_list) {
 		super();
 		this.pro_id = pro_id;
 		this.pro_name = pro_name;
 		this.pro_description = pro_description;
 		this.pro_type = pro_type;
+		this.task_list = task_list;
 	}
+
+
 
 	public int getPro_id() {
 		return pro_id;
@@ -79,9 +95,19 @@ public class Project {
 		this.pro_type = pro_type;
 	}
 
+	public List<Task> getTask_list() {
+		return task_list;
+	}
+
+	public void setTask_list(List<Task> task_list) {
+		this.task_list = task_list;
+	}
+
 	@Override
 	public String toString() {
 		return "Project [pro_id=" + pro_id + ", pro_name=" + pro_name + ", pro_description=" + pro_description
-				+ ", pro_type=" + pro_type + "]";
+				+ ", pro_type=" + pro_type + ", task_list=" + task_list + "]";
 	}
+
+	
 }

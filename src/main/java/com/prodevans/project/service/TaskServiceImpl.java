@@ -39,7 +39,7 @@ public class TaskServiceImpl implements TaskService {
 
 	@Override
 	public List<Task> getTask() {
-		return this.task_dao.getTask();
+		return this.task_dao.getTasks();
 	}
 
 	@Override
